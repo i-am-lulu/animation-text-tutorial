@@ -7,7 +7,8 @@
     position: relative;
     height: 100vh;
     width: 100vw;
-    background-color: #a6ddcb;
+    background-color: #e1f4ef;
+    overflow: hidden;
 }
 
 .circle {
@@ -37,3 +38,34 @@
     z-index: 2;
     margin: -100px 0 0 -100px;
 }
+
+.cursor {
+    position: fixed;
+    background-color: blue;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: -7.5px 0 0 -7.5px; /* widthの15を2で割った値を上と左につけている */
+    user-select: none;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.content {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    mix-blend-mode: screen;
+    z-index: 4;
+}
+
+.content h1 {
+    font-size: 9rem;
+}
+
